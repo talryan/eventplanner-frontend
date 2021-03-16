@@ -11,7 +11,7 @@ class EventsContainer extends Component {
     render() {
         return (
             <div>
-                Event container
+                console.log ("Hello!")
             </div>
         );
     }

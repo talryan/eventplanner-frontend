@@ -1,11 +1,13 @@
 import React from 'react';
-
+import Router from './components/Router'
+import EventsContainer from './containers/EventsContainer'
 
 
 const App = () => {
     return (
         <div>
-            Hello World!
+            <EventsContainer />
+            <Router />
         </div>
     );
 

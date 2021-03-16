@@ -7,7 +7,8 @@ import thunk from 'redux-thunk'
 import { composeWithDevTools } from 'redux-devtools-extension';
 import App from './App'
 import { rootReducer } from './reducers/rootReducer'
-import ReactDOM from 'react-dom';
+import { BrowserRouter as Router } from 'react-router-dom'
+import { render } from 'react-dom'
 
 
 
@@ -16,11 +17,11 @@ import ReactDOM from 'react-dom';
 const store = createStore(rootReducer, composeWithDevTools(applyMiddleware(thunk))
 )
 
-ReactDOM.render(
-    <React.StrictMode>
+render(
+
         <Provider store={store}>
                 <App />
-        </Provider>
-    </React.StrictMode>,
+                <Router />
+        </Provider>,
     document.getElementById('root')
 );
