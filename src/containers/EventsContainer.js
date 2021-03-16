@@ -3,6 +3,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
 import {fetchEvents} from '../actions/eventActions'
+import EventForm from '../components/events/EventsForm'
 
 class EventsContainer extends Component {
     componentDidMount() {
@@ -11,7 +12,7 @@ class EventsContainer extends Component {
     render() {
         return (
             <div>
-                console.log ("Hello!")
+                <EventForm />
             </div>
         );
     }
