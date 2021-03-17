@@ -7,7 +7,8 @@ import {
     Link
   } from "react-router-dom";
   import EventsContainer from './containers/EventsContainer'
-  import EventForm from './components/events/EventsForm'
+  import EventForm from './components/events/EventForm'
+  import ClientForm from './components/clients/ClientForm'
 
     export default class App extends Component {
     render() {
@@ -16,17 +17,22 @@ import {
                 <div>
                     <ul>
                     <li>
-                        <Link to="/">Home</Link><br/>
-                        <Link to="/events">Events</Link><br/>
-                        <Link to="/events/new">New Event</Link>
+                        <Link to="/">Home</Link><br />
+                        <Link to="/events">Events</Link><br />
+                        <Link to="/events/new">New Event</Link> <br />
+                        <Link to="/clients/new">New Client</Link>
+                        
                     </li>
                     </ul>
                 </div>
                     <Switch>
                         <Route exact path="/">< Home /> </Route>
                         <Route exact path="/events">< Events /> </Route>
+                     
                         <Route exact path='/events/new' component={EventForm} />
+                        <Route exact path='/clients/new' component={ClientForm} />
                     </Switch>
+
             </Router> 
         );
 
@@ -48,4 +54,6 @@ import {
         <EventsContainer />
       </div>
     );
+
+
   }

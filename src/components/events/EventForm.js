@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
-
 import { addEvent } from '../../actions/eventActions'
 
-class EventsForm extends Component {
+class EventForm extends Component {
 
     state = { 
         date: '',
@@ -14,38 +13,39 @@ class EventsForm extends Component {
     }
 
     handleChange = e => {
-        const { date, value } = e.target
+        const { name, value } = e.target
         this.setState({
-            [date]: value
+            [name]: value
         })
     }
 
     handleSubmit = e => {
         e.preventDefault()
         this.props.addEvent(this.state)
+        e.target.reset()
     }
 
     render() {
         return (
             <form onSubmit={this.handleSubmit}>
                 <strong> Create New Event </strong> <br/>
-                <label>Date</label>
-                <input type='date' value={this.state.date} onChange={this.handleChange} name='date'/>
+                <label>Date: </label>
+                <input type='date' value={this.state.date} onChange={this.handleChange} name='date' required/>
                 <br/>
 
-                <label>Time</label>
-                <input type='time' value={this.state.time} onChange={this.handleChange} name='time'/>
+                <label>Time: </label>
+                <input type='time' value={this.state.time} onChange={this.handleChange} name='time' required/>
                 <br/>
 
-                <label>Total</label>
-                <input type='numeric' value={this.state.grad_date} onChange={this.handleChange} name='total'/>
+                <label>Total: $</label>
+                <input type='numeric' value={this.state.grad_date} onChange={this.handleChange} name='total'required/>
                 <br/>
 
-                <label>Classification</label>
-                <input type='text' value={this.state.classification} onChange={this.handleChange} name='classification'/>
+                <label>Occasion: </label>
+                <input type='text' value={this.state.classification} onChange={this.handleChange} name='classification'required/>
                 <br/>
 
-                <label>Status</label>
+                <label>Status: </label>
                 <br/>
                     <input type='radio' value={"Tentative"} checked={this.state.status === "Tentative"} onChange={this.handleChange} name='status'/> <label> Tentative </label> 
                     <input type='radio' value={"Confirmed"} checked={this.state.status === "Confirmed"} onChange={this.handleChange} name='status'/> <label> Confirmed </label>
@@ -55,10 +55,11 @@ class EventsForm extends Component {
 
                 <input type='submit' value='Create Event' />
 
-
+            
             </form>
+          
         );
     }
 }
 
-export default connect(null, { addEvent })(EventsForm);
+export default connect(null, { addEvent })(EventForm);

@@ -16,4 +16,5 @@ export const addEvent = (newEvent) => {
         .then(resp => resp.json())
         .then(newEvent => dispatch({ type: 'ADD_EVENT', payload: newEvent}))
     }
+   
 }
