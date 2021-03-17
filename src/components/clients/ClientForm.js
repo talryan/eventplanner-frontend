@@ -43,9 +43,8 @@ class ClientForm extends Component {
 
                 <label>Email</label>
                 <input type='text' value={this.state.email} onChange={this.handleChange} name='email'required/>
-                <br/>
-                
-              
+                <br/><br />
+             
 
                 <input type='submit' value='Create Client' />
 

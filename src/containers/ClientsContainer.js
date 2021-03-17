@@ -4,7 +4,7 @@ import {fetchClients} from '../actions/clientActions'
 import {
     Link
   } from "react-router-dom";
-
+import ClientList from '../components/clients/Client'
 
 class ClientsContainer extends Component {
     componentDidMount() {
@@ -13,6 +13,7 @@ class ClientsContainer extends Component {
     render() {
         return (
             <div>
+                <ClientList />
                 Put list of clients shit <br />
                  <Link to="/clients/new">New Client</Link> <br />
             </div>

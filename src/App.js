@@ -10,6 +10,7 @@ import {
   import ClientsContainer from './containers/ClientsContainer'
   import EventForm from './components/events/EventForm'
   import ClientForm from './components/clients/ClientForm'
+ 
 
     export default class App extends Component {
     render() {
@@ -31,7 +32,7 @@ import {
                     <Switch>
                         <Route exact path="/">< Home /> </Route>
                         <Route exact path="/events">< Events /> </Route>
-                        <Route exact path="/clients">< Clients /> </Route>
+                        <Route exact path="/clients"> <Clients /> </Route>
                         <Route exact path='/events/new' component={EventForm} />
                         <Route exact path='/clients/new' component={ClientForm} />
                     </Switch>
