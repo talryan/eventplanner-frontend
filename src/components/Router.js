@@ -1,17 +1,19 @@
 
-import React from 'react';
-import { Switch, Route} from 'react-router-dom'
+// import React from 'react';
+// import { Switch, Route, Link} from 'react-router-dom'
 
-import Home from './Home'
+// import Home from './Home'
+// // import EventsForm from '../components/events/EventsForm'
 
-const Router = () => {
-    return (
+// const Router = () => {
+//     return (
 
-        <Switch>
-            <Route exact path='/' component={Home} />
-        </Switch>
+//         <Switch>
+//             <Link to="/">Home</Link>
+           
+//         </Switch>
         
-    );
-};
+//     );
+// };
 
-export default Router;
+// export default Router;

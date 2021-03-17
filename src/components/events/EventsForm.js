@@ -34,7 +34,7 @@ class EventsForm extends Component {
                 <br/>
 
                 <label>Time</label>
-                <input type='time' value={this.state.date} onChange={this.handleChange} name='time'/>
+                <input type='time' value={this.state.time} onChange={this.handleChange} name='time'/>
                 <br/>
 
                 <label>Total</label>

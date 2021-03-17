@@ -1,16 +1,51 @@
 import React from 'react';
-import Router from './components/Router'
-import EventsContainer from './containers/EventsContainer'
+import {Component} from 'react';
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+    Link
+  } from "react-router-dom";
+  import EventsContainer from './containers/EventsContainer'
+  import EventForm from './components/events/EventsForm'
 
+    export default class App extends Component {
+    render() {
+        return (
+          <Router>
+                <div>
+                    <ul>
+                    <li>
+                        <Link to="/">Home</Link><br/>
+                        <Link to="/events">Events</Link><br/>
+                        <Link to="/events/new">New Event</Link>
+                    </li>
+                    </ul>
+                </div>
+                    <Switch>
+                        <Route exact path="/">< Home /> </Route>
+                        <Route exact path="/events">< Events /> </Route>
+                        <Route exact path='/events/new' component={EventForm} />
+                    </Switch>
+            </Router> 
+        );
 
-const App = () => {
+      }
+ }
+
+ function Home() {
     return (
-        <div>
-            <EventsContainer />
-            <Router />
-        </div>
+      <div>
+        <h2>Home Page</h2>
+      </div>
     );
+  }
 
-};
-
-export default App;
+  function Events()  {
+    return (
+      <div>
+        <h2>Events</h2>
+        <EventsContainer />
+      </div>
+    );
+  }
