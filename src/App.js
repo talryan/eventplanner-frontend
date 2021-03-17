@@ -25,6 +25,7 @@ import {
                         These two need to be combined into new event <br />
                         <Link to="/events/new">New Event</Link> <br />
                         <Link to="/clients/new">New Client</Link>
+
                         
                     </li>
                     </ul>
@@ -35,6 +36,7 @@ import {
                         <Route exact path="/clients"> <Clients /> </Route>
                         <Route exact path='/events/new' component={EventForm} />
                         <Route exact path='/clients/new' component={ClientForm} />
+                        <Route exact path='/clients/:id'><ClientShow /> </Route>
                     </Switch>
 
             </Router> 
@@ -68,4 +70,12 @@ import {
           </div>
         );
     }
-  
+
+   function ClientShow()  {
+        return (
+          <div>
+            <h2>Clients</h2>
+          
+          </div>
+        );
+    }

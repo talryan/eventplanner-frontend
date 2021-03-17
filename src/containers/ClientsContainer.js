@@ -4,7 +4,7 @@ import {fetchClients} from '../actions/clientActions'
 import {
     Link
   } from "react-router-dom";
-import ClientList from '../components/clients/Client'
+import ClientList from '../components/clients/ClientList'
 
 class ClientsContainer extends Component {
     componentDidMount() {
