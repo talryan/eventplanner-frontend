@@ -28,6 +28,7 @@ class EventsForm extends Component {
     render() {
         return (
             <form onSubmit={this.handleSubmit}>
+                <strong> Create New Event </strong> <br/>
                 <label>Date</label>
                 <input type='date' value={this.state.date} onChange={this.handleChange} name='date'/>
                 <br/>
@@ -45,10 +46,11 @@ class EventsForm extends Component {
                 <br/>
 
                 <label>Status</label>
-                <input type='radio' value={"Tentative"} checked={this.state.status === "Tentative"} onChange={this.handleChange} name='status'/>
-                <input type='radio' value={"Confirmed"} checked={this.state.status === "Confirmed"} onChange={this.handleChange} name='status'/>
-                <input type='radio' value={"Closed"} checked={this.state.status === "Closed"} onChange={this.handleChange} name='status'/>
-                <input type='radio' value={"Cancelled"} checked={this.state.status === "Cancelled"} onChange={this.handleChange} name='status'/>
+                <br/>
+                    <input type='radio' value={"Tentative"} checked={this.state.status === "Tentative"} onChange={this.handleChange} name='status'/> <label> Tentative </label> 
+                    <input type='radio' value={"Confirmed"} checked={this.state.status === "Confirmed"} onChange={this.handleChange} name='status'/> <label> Confirmed </label>
+                    <input type='radio' value={"Closed"} checked={this.state.status === "Closed"} onChange={this.handleChange} name='status'/> <label> Closed </label> 
+                    <input type='radio' value={"Cancelled"} checked={this.state.status === "Cancelled"} onChange={this.handleChange} name='status'/> <label> Cancelled </label>
                 <br/>
 
                 <input type='submit' value='Create Event' />

@@ -20,8 +20,9 @@ const store = createStore(rootReducer, composeWithDevTools(applyMiddleware(thunk
 render(
 
         <Provider store={store}>
+            <Router>
                 <App />
-                <Router />
+            </Router>
         </Provider>,
     document.getElementById('root')
 );
