@@ -9,7 +9,8 @@ class EventForm extends Component {
         time: '',
         total: '',
         classification: '',
-        status: ''
+        status: '',
+        details: ''
     }
 
     handleChange = e => {
@@ -54,7 +55,7 @@ class EventForm extends Component {
                 <br/>
 
                 <label>Details:</label>
-                <input type='paragraph' value={this.state.details} onChange={this.handleChange} name='details' required/>
+                <input type='text' value={this.state.details} onChange={this.handleChange} name='details' required/> <br />
 
                 <input type='submit' value='Create Event' />
 

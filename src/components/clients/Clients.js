@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
  
-const ClientList = ({ clients }) => {
+const Clients = ({ clients }) => {
     return (
         <div>
             <h1>Clients List:</h1>
@@ -25,4 +25,4 @@ const mapStateToProps = state => {
     return { clients: state.clients }
 }
 
-export default connect(mapStateToProps)(ClientList);
+export default connect(mapStateToProps)(Clients);
