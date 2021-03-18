@@ -8,7 +8,7 @@ export const fetchClients = () => {
 
 export const addClient = (addClient) => {
     return dispatch => {
-        fetch('http://127.0.0.1:3000/events', {
+        fetch('http://127.0.0.1:3000/clients', {
             method: 'POST',
             body: JSON.stringify(addClient),
             headers: { 'Content-Type': 'application/json'}

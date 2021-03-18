@@ -6,10 +6,10 @@ import {
     Route,
     Link
   } from "react-router-dom";
-  import EventsContainer from '../../containers/EventsContainer'
-  import ClientsContainer from '../../containers/ClientsContainer'
-  import EventForm from '../events/EventForm'
-  import ClientForm from './ClientForm'
+  import EventsContainer from '../containers/EventsContainer'
+  import ClientsContainer from '../containers/ClientsContainer'
+  import EventForm from './events/EventForm'
+  import ClientForm from './clients/ClientForm'
 
 export default class NavBar extends Component {
     render() {

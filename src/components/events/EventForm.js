@@ -53,6 +53,9 @@ class EventForm extends Component {
                     <input type='radio' value={"Cancelled"} checked={this.state.status === "Cancelled"} onChange={this.handleChange} name='status'/> <label> Cancelled </label>
                 <br/>
 
+                <label>Details:</label>
+                <input type='paragraph' value={this.state.details} onChange={this.handleChange} name='details' required/>
+
                 <input type='submit' value='Create Event' />
 
             
