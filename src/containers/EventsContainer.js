@@ -6,7 +6,7 @@ import {fetchEvents} from '../actions/eventActions'
 import {
     Link
   } from "react-router-dom";
-//   import EventList from '../components/events/EventList'
+  import EventList from '../components/events/EventList'
 
 
 class EventsContainer extends Component {
@@ -17,7 +17,7 @@ class EventsContainer extends Component {
         return (
             <div>
                 <li>
-               
+               <EventList />
                 </li>
                 Put Event Calendar Here <br />
                  <Link to="/events/new">New Event</Link> <br />

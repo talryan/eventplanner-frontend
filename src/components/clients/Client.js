@@ -1,20 +1,20 @@
 import React from 'react';
 import { connect } from 'react-redux'
-
+import EventList from '../events/EventList'
  
-const Client = ({ clients }) => {
+const Client = ({ clients, match }) => {  
+  
+    const id = parseInt(match.params.id)
+    const client = clients.find(c => c.id === id)
+    console.log(client)
     return (
         <div>
             <h1>Client Show:</h1>
-            
-            {clients.map(client => 
-                <ul key={client.id}>
-                    <li >
-                    Show information about client/:id
-                   * Create 'Add Event' button 
-                    </li>
-                </ul>
-        )}
+          First Name: {client.first_name} Last Name: {client.last_name}
+        
+        <EventList client ={client} />
+        
+    
         </div>
     );
 };

@@ -7,8 +7,7 @@ import {
   import EventsContainer from './containers/EventsContainer'
   import ClientsContainer from './containers/ClientsContainer'
   import EventForm from './components/events/EventForm'
-  import ClientForm from './components/clients/ClientForm'
-  import Client from './components/clients/Client'
+
 
     import NavBar from './components/NavBar';
  
@@ -22,10 +21,8 @@ import {
                             <Switch>
                                     <Route exact path="/">< Home /> </Route>
                                     <Route exact path="/events">< Events /> </Route>
-                                    <Route exact path="/clients"> <Clients /> </Route>
+                                    <Route path="/clients"> <ClientsContainer /> </Route>
                                     <Route exact path='/events/new' component={EventForm} />
-                                    <Route exact path='/clients/new' component={ClientForm} />
-                                    <Route exact path='/clients/:id'component={Client}/>
                             </Switch> 
                      
                     </div> 
@@ -53,11 +50,3 @@ return (
 );
 }
 
-function Clients()  {
-return (
-<div>
-<h2>Clients</h2>
-<ClientsContainer />
-</div>
-);
-}

@@ -3,7 +3,10 @@ import { connect } from 'react-redux'
 import {fetchClients} from '../actions/clientActions'
 import { Route, Switch } from 'react-router-dom';
 import Clients from '../components/clients/Clients'
-import EventsContainer from '../containers/EventsContainer'
+// import EventsContainer from '../containers/EventsContainer'
+import ClientForm from '../components/clients/ClientForm'
+import Client from '../components/clients/Client'
+import EventList from '../components/events/EventList'
 
 class ClientsContainer extends Component {
     componentDidMount() {
@@ -12,12 +15,13 @@ class ClientsContainer extends Component {
     render() {
         return (
             <div>
-                   <Switch>
+                <Switch>
+                    <Route exact path='/clients/new' component={ClientForm} />
+                    <Route exact path='/clients/:id'component={Client}/>
                     <Route path='/clients/:id/events' component={(routeInfo) => {
                         const id = parseInt(routeInfo.match.params.id)
                         const client = this.props.clients.find(c => c.id === id)
-                        console.log(routeInfo)
-                        return !! client ? <EventsContainer routeInfo={routeInfo} client={client}/> :
+                        return !! client ? <EventList routeInfo={routeInfo} client={client}/> :
                         <div>Loading...</div>
                     } } />
                     <Route exact path='/clients' component={ Clients } />
