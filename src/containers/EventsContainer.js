@@ -10,9 +10,9 @@ import {
 
 
 class EventsContainer extends Component {
-    componentDidMount() {
-        this.props.fetchEvents()
-    }
+    // componentDidMount() {
+    //     this.props.fetchEvents()
+    // }
     render() {
         return (
             <div>

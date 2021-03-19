@@ -7,6 +7,7 @@ import Clients from '../components/clients/Clients'
 import ClientForm from '../components/clients/ClientForm'
 import Client from '../components/clients/Client'
 import EventList from '../components/events/EventList'
+import ClientEvent from '../components/events/ClientEvent'
 
 class ClientsContainer extends Component {
     componentDidMount() {
@@ -18,6 +19,12 @@ class ClientsContainer extends Component {
                 <Switch>
                     <Route exact path='/clients/new' component={ClientForm} />
                     <Route exact path='/clients/:id'component={Client}/>
+                    <Route exact path='/clients/:id/events/:id' component={(routeInfo)=> {
+                     
+                 
+                       <ClientEvent routeInfo={routeInfo} /> 
+                   
+                    } } />
                     <Route path='/clients/:id/events' component={(routeInfo) => {
                         const id = parseInt(routeInfo.match.params.id)
                         const client = this.props.clients.find(c => c.id === id)
@@ -25,6 +32,7 @@ class ClientsContainer extends Component {
                         <div>Loading...</div>
                     } } />
                     <Route exact path='/clients' component={ Clients } />
+                   
                 </Switch>
                
             </div>

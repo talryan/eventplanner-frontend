@@ -4,15 +4,22 @@ import {
   Switch,
     Route,
   } from "react-router-dom";
+  import { connect } from 'react-redux'
   import EventsContainer from './containers/EventsContainer'
   import ClientsContainer from './containers/ClientsContainer'
   import EventForm from './components/events/EventForm'
+  import {fetchEvents} from './actions/eventActions'
 
 
     import NavBar from './components/NavBar';
  
 
-    export default class App extends Component {
+    class App extends Component {
+
+        componentDidMount() {
+    
+        this.props.dispatchFetchEvents()
+        }
 
         render() {
             return (
@@ -50,3 +57,8 @@ return (
 );
 }
 
+const mapDispatchToProps = (dispatch) => {
+    return {dispatchFetchEvents: () => dispatch(fetchEvents())}
+  }
+  
+  export default connect(null, mapDispatchToProps)(App)

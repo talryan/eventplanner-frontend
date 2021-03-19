@@ -30,6 +30,10 @@ class EventForm extends Component {
         return (
             <form onSubmit={this.handleSubmit}>
                 <strong> Create New Event </strong> <br/>
+                <label>Event Name: </label>
+                <input type='text' value={this.state.event_name} onChange={this.handleChange} name='event_name' required/>
+                <br/>
+            
                 <label>Date: </label>
                 <input type='date' value={this.state.date} onChange={this.handleChange} name='date' required/>
                 <br/>

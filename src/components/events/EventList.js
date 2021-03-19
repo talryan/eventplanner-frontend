@@ -4,35 +4,43 @@ import { Link } from 'react-router-dom'
 import {fetchClientEvents} from '../../actions/eventActions'
 
 
+
 class EventList extends Component {
     componentDidMount() {
-        this.props.fetchClientEvents()
+        this.props.fetchClientEvents(this.props.client.id)
     }       
+    filterEvents = () => {
+        return this.props.events.filter(
+            event => event.client_id === this.props.client.id
+        )
+    }
     render() {
-       
+ 
         // EventList = ({ client, events }) => {
-        console.log(this.props.events)
+        console.log(this.props.client.id)
         return (
             <div>
                 <h1>events List:</h1>
-                {this.props.events.map(event => 
+                {this.filterEvents().map(event => 
                     <ul key={event.id}>
                         <li >
-                        <Link to= {`clients/${event.client_id}/events/${event.id}`}>
+                        <Link to= {`${this.props.routeInfo.location.pathname}/${event.id}`}>
                         
                             {event.date} - {event.time}
                         
                         </Link>
                         </li>
                     </ul>
+                    
             )}
+
             </div>
         );
     
     };
 }
 const mapStateToProps = state => {
-    return { events: state.events }
+    return { events: state.events } 
 }
 
 export default connect(mapStateToProps, {fetchClientEvents})(EventList);
