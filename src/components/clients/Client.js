@@ -6,7 +6,7 @@ const Client = ({ clients, match }) => {
   
     const id = parseInt(match.params.id)
     const client = clients.find(c => c.id === id)
-    console.log(client)
+   
     return (
         <div>
             <h1>Client Show:</h1>

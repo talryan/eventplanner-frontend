@@ -20,10 +20,8 @@ class ClientsContainer extends Component {
                     <Route exact path='/clients/new' component={ClientForm} />
                     <Route exact path='/clients/:id'component={Client}/>
                     <Route exact path='/clients/:id/events/:id' component={(routeInfo)=> {
-                     
-                 
-                       <ClientEvent routeInfo={routeInfo} /> 
-                   
+                        console.log(this.props.events)
+                       return <ClientEvent routeInfo={routeInfo} /> 
                     } } />
                     <Route path='/clients/:id/events' component={(routeInfo) => {
                         const id = parseInt(routeInfo.match.params.id)
@@ -41,7 +39,11 @@ class ClientsContainer extends Component {
 }
 
 const mapStateToProps = state => {
-    return {clients: state.clients}
+    console.log(state)
+    return {
+        clients: state.clients,
+       
+    }
 }
 
 export default connect(mapStateToProps, {fetchClients})(ClientsContainer);

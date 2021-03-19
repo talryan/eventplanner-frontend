@@ -17,7 +17,7 @@ class EventList extends Component {
     render() {
  
         // EventList = ({ client, events }) => {
-        console.log(this.props.client.id)
+     
         return (
             <div>
                 <h1>events List:</h1>
