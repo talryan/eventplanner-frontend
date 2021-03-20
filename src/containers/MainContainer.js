@@ -12,6 +12,7 @@ class MainContainer extends Component {
             <div>
                 <Home />
                 <Dashboard />
+                
             </div>
         );
     }

@@ -9,16 +9,14 @@ import {  Link } from "react-router-dom";
             return (
         
                     <div>
-                        <ul>
-                        <li>
+                       
                             <Link to="/">Home</Link> ||
                             <Link to="/events">Events</Link> ||
                             <Link to ="/clients"> Clients </Link> ||
                             <Link to="/clients/new">New Client</Link> 
 
                             
-                        </li>
-                        </ul>
+                      
                     </div>
             )
         }

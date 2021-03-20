@@ -11,10 +11,12 @@ class EventForm extends Component {
         total: '',
         classification: '',
         status: '',
-        details: ''
+        details: '',
+        client_id: this.props.clientId
     }
 
     handleChange = e => {
+      
         const { name, value } = e.target
         this.setState({
             [name]: value

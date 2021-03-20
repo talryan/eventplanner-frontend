@@ -1,26 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-
-
- 
-//  const ClientEvent = (props) => {
-//     debugger
-//     return (
-      
-//         <div>
-//             <h1>You made it!:</h1>
-            
-            
-         
-        
-    
-//         </div>
-//     );
-// };
-
-
-
-// export default ClientEvent
+import DisplayDate from '../DisplayDate'
 
 class ClientEvent extends React.Component {
 
@@ -29,7 +9,9 @@ class ClientEvent extends React.Component {
         let event = this.props.events.find(event => event.id === parseInt(this.props.routeInfo.match.params.id))
         return (
             <div> 
-                {event.date}
+                Date: {DisplayDate(event.date)}  <br />
+                Time: {event.time}
+
             </div>
         )
     }

@@ -9,7 +9,8 @@ class ClientForm extends Component {
         first_name: '',
         last_name: '',
         phone_number: '',
-        email: ''
+        email: '',
+        company_name: ''
     }
 
     handleChange = e => {
@@ -35,6 +36,10 @@ class ClientForm extends Component {
 
                 <label>Last Name </label>
                 <input type='text' value={this.state.last_name} onChange={this.handleChange} name='last_name' required/>
+                <br/>
+
+                <label>Company Name</label>
+                <input type='text' value={this.state.company_name} onChange={this.handleChange} name='company_name'/>
                 <br/>
 
                 <label>Phone Number</label>
