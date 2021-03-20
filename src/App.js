@@ -10,6 +10,7 @@ import {
   import MainContainer from './containers/MainContainer'
   import EventForm from './components/events/EventForm'
   import {fetchEvents} from './actions/eventActions'
+  import Home from './components/Home'
 
 
  
@@ -27,7 +28,7 @@ import {
                          <MainContainer />
                     
                             <Switch>
-                                    <Route exact path="/">< Home /> </Route>
+                                    <Route exact path="/"> <Home /> </Route>
                                     <Route exact path="/events">< Events /> </Route>
                                     <Route path="/clients"> <ClientsContainer /> </Route>
                                     <Route exact path='/events/new' component={EventForm} />
@@ -42,13 +43,6 @@ import {
 
 
 
-function Home() {
-return (
-<div>
-
-</div>
-);
-}
 
 function Events()  {
 return (
