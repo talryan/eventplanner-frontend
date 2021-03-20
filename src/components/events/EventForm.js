@@ -38,7 +38,7 @@ class EventForm extends Component {
                 <br/>
             
                 <label>Date: </label>
-                <input type='date' value={this.state.date} onChange={this.handleChange} name='date' required/>
+                <input type='date' value={this.state.date} onChange={this.handleChange} start='Date.now' name='date' required/>
                 <br/>
 
                 <label>Time: </label>

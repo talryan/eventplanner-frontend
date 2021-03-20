@@ -3,9 +3,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
 import {fetchEvents} from '../actions/eventActions'
-import {
-    Link
-  } from "react-router-dom";
+
 
 
 
@@ -15,12 +13,10 @@ class EventsContainer extends Component {
     // }
     render() {
         return (
-            <div>
-                <li>
+            <div className='events-container'> 
               
-                </li>
                 Put Event Calendar Here <br />
-                 <Link to="/events/new">New Event</Link> <br />
+                 
             </div>
         );
     }

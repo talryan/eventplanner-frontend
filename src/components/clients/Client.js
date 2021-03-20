@@ -8,7 +8,7 @@ const Client = ({ clients, match }) => {
     const client = clients.find(c => c.id === id)
    
     return (
-        <div>
+        <div className='client-show'> 
             <h1>Client Show:</h1>
           First Name: {client.first_name} Last Name: {client.last_name}
         

@@ -4,11 +4,11 @@
   import { connect } from 'react-redux'
   import EventsContainer from './containers/EventsContainer'
   import ClientsContainer from './containers/ClientsContainer'
-  import NavBar from './components/NavBar'
+  import NavBar from './components/Header/NavBar'
   import EventForm from './components/events/EventForm'
   import {fetchEvents} from './actions/eventActions'
   import MainContainer from './containers/MainContainer';
-
+  import Header from './components/Header/Header'
 
  
 
@@ -20,6 +20,7 @@
       render() {
           return (
                   <div>
+                      <Header />
                       <NavBar />
                           <Switch>
                                   <Route exact path="/"> <MainContainer/> </Route>

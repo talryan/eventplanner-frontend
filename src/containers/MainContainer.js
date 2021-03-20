@@ -9,7 +9,7 @@ class MainContainer extends Component {
     // }
     render() {
         return (
-            <div>
+            <div className='main-container'> 
                 <Home />
                 <Dashboard />
                 

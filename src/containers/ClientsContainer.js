@@ -15,7 +15,7 @@ class ClientsContainer extends Component {
     }
     render() {
         return (
-            <div>
+            <div className='clients-container'> 
                 <Switch>
                     <Route exact path='/clients/new' component={ClientForm} />
                     <Route exact path='/clients/:id'component={Client}/>

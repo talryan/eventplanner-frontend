@@ -15,20 +15,23 @@ class ClientEvents extends Component {
         )
     }
     displayForm = () => {
-       return (
-       <div hidden= 'false'>
-        <EventForm clientId = {this.props.client.id}/>
+        console.log("click")
+        return(
+        <div>
+           
+        <EventForm />
         </div>
-       )
+        )
     }
 
     render() {
      
         return (
-            <div>
+            <div className='client-events'>
+                <h1> Client Info</h1>
                 <h1>Event History:</h1>
                 <button onClick = {this.displayForm}> Add Event</button>
-             
+                {/* <EventForm hidden ='true' clientId = {this.props.client.id}/> */}
                 <h4> add conditional for no events to display no events</h4> 
                 {this.filterEvents().map(event => 
                     <ul key={event.id}>
