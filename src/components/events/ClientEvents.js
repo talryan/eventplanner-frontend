@@ -5,7 +5,7 @@ import {fetchClientEvents} from '../../actions/eventActions'
 
 
 
-class EventList extends Component {
+class ClientEvents extends Component {
     componentDidMount() {
         this.props.fetchClientEvents(this.props.client.id)
     }       
@@ -15,18 +15,17 @@ class EventList extends Component {
         )
     }
     render() {
- 
-        // EventList = ({ client, events }) => {
      
         return (
             <div>
-                <h1>events List:</h1>
+                <h1>Event History:</h1>
+                <h4> add conditional for no events to display no events</h4> 
                 {this.filterEvents().map(event => 
                     <ul key={event.id}>
                         <li >
                         <Link to= {`${this.props.routeInfo.location.pathname}/${event.id}`}>
                         
-                            {event.date} - {event.time}
+                            {event.date} - {event.event_name}
                         
                         </Link>
                         </li>
@@ -43,4 +42,4 @@ const mapStateToProps = state => {
     return { events: state.events } 
 }
 
-export default connect(mapStateToProps, {fetchClientEvents})(EventList);
+export default connect(mapStateToProps, {fetchClientEvents})(ClientEvents);

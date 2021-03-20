@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux'
-import EventList from '../events/EventList'
+import ClientEvents from '../events/ClientEvents'
  
 const Client = ({ clients, match }) => {  
   
@@ -12,7 +12,7 @@ const Client = ({ clients, match }) => {
             <h1>Client Show:</h1>
           First Name: {client.first_name} Last Name: {client.last_name}
         
-        <EventList client ={client} />
+        <ClientEvents client ={client} />
         
     
         </div>

@@ -5,7 +5,8 @@ import { Link } from 'react-router-dom'
 const Clients = ({ clients }) => {
     return (
         <div>
-            <h1>Clients List:</h1>
+            <h1>Please Select A Client :</h1>
+            <h4> **Add search function here**</h4>
             {clients.map(client => 
                 <ul key={client.id}>
                     <li >

@@ -6,7 +6,7 @@ import Clients from '../components/clients/Clients'
 // import EventsContainer from '../containers/EventsContainer'
 import ClientForm from '../components/clients/ClientForm'
 import Client from '../components/clients/Client'
-import EventList from '../components/events/EventList'
+import ClientEvents from '../components/events/ClientEvents'
 import ClientEvent from '../components/events/ClientEvent'
 
 class ClientsContainer extends Component {
@@ -26,7 +26,7 @@ class ClientsContainer extends Component {
                     <Route path='/clients/:id/events' component={(routeInfo) => {
                         const id = parseInt(routeInfo.match.params.id)
                         const client = this.props.clients.find(c => c.id === id)
-                        return !! client ? <EventList routeInfo={routeInfo} client={client}/> :
+                        return !! client ? <ClientEvents routeInfo={routeInfo} client={client}/> :
                         <div>Loading...</div>
                     } } />
                     <Route exact path='/clients' component={ Clients } />

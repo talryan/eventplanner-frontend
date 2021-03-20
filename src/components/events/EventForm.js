@@ -5,6 +5,7 @@ import { addEvent } from '../../actions/eventActions'
 class EventForm extends Component {
 
     state = { 
+        event_name: '',
         date: '',
         time: '',
         total: '',
