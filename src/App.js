@@ -7,10 +7,11 @@ import {
   import { connect } from 'react-redux'
   import EventsContainer from './containers/EventsContainer'
   import ClientsContainer from './containers/ClientsContainer'
-  import MainContainer from './containers/MainContainer'
+  import NavBar from './components/NavBar'
   import EventForm from './components/events/EventForm'
   import {fetchEvents} from './actions/eventActions'
-  import Home from './components/Home'
+  // import Home from './components/Home'
+import MainContainer from './containers/MainContainer';
 
 
  
@@ -25,10 +26,10 @@ import {
         render() {
             return (
                      <div>
-                         <MainContainer />
+                        <NavBar />
                     
                             <Switch>
-                                    <Route exact path="/"> <Home /> </Route>
+                                    <Route exact path="/"> <MainContainer/> </Route>
                                     <Route exact path="/events">< Events /> </Route>
                                     <Route path="/clients"> <ClientsContainer /> </Route>
                                     <Route exact path='/events/new' component={EventForm} />
