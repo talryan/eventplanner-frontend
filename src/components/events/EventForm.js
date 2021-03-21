@@ -40,7 +40,7 @@ class EventForm extends Component {
 
     render() {
         return (
-            <form onSubmit={this.handleSubmit}>
+            <form className= "Event-Form" onSubmit={this.handleSubmit}>
                 <strong> Create New Event </strong> <br/>
                 <label>Event Name: </label>
                 <input type='text' value={this.state.event_name} onChange={this.handleChange} name='event_name' required/>
@@ -64,10 +64,10 @@ class EventForm extends Component {
 
                 <label>Status: </label>
                 <br/>
-                    <input type='radio' value={"Tentative"} checked={this.state.status === "Tentative"} onChange={this.handleChange} name='status'/> <label> Tentative </label> 
-                    <input type='radio' value={"Confirmed"} checked={this.state.status === "Confirmed"} onChange={this.handleChange} name='status'/> <label> Confirmed </label>
-                    <input type='radio' value={"Closed"} checked={this.state.status === "Closed"} onChange={this.handleChange} name='status'/> <label> Closed </label> 
-                    <input type='radio' value={"Cancelled"} checked={this.state.status === "Cancelled"} onChange={this.handleChange} name='status'/> <label> Cancelled </label>
+                    <input type='radio' className = 'tentative-selection' value={"Tentative"} checked={this.state.status === "Tentative"} onChange={this.handleChange} name='status'/> <label> Tentative </label> 
+                    <input type='radio' className = 'confirmed-selection' value={"Confirmed"} checked={this.state.status === "Confirmed"} onChange={this.handleChange} name='status'/> <label> Confirmed </label>
+                    <input type='radio' className = 'closed-selection' value={"Closed"} checked={this.state.status === "Closed"} onChange={this.handleChange} name='status'/> <label> Closed </label> 
+                    <input type='radio' className = 'cancelled-selection' value={"Cancelled"} checked={this.state.status === "Cancelled"} onChange={this.handleChange} name='status'/> <label> Cancelled </label>
                 <br/>
 
                 <label>Details:</label>

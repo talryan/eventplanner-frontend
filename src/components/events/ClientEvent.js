@@ -13,6 +13,7 @@ class ClientEvent extends React.Component {
                 Name: {event.event_name} <br />
                 Date: {DisplayDate(event.date)}  <br />
                 Time: {event.time} <br />
+                Total: {event.total}<br />
                 Status: {event.status} <br />
                 Occasion: {event.classification} <br />
                 Details: {event.details}

@@ -1,3 +1,22 @@
 li{
     list-style-type: none;
 }
+
+.client-show {
+    left: 30px;
+    text-align: center;
+    border: 1px black solid;
+}
+
+.Event-Form {
+    text-align: center;
+    border: 1px black solid;
+}
+
+.radio {
+    display: block;
+    width: 1em;
+    height: 1em;
+    border-radius: 50%;
+    border: 0.1em solid currentColor;
+}

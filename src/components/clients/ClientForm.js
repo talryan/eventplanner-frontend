@@ -23,7 +23,13 @@ class ClientForm extends Component {
     handleSubmit = e => {
         e.preventDefault()
         this.props.addClient(this.state)
-        e.target.reset()
+       this.setState({
+        first_name: '',
+        last_name: '',
+        phone_number: '',
+        email: '',
+        company_name: ''
+       })
     }
 
     render() {
