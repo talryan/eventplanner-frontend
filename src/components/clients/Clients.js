@@ -10,8 +10,8 @@ const Clients = ({ clients }) => {
             {clients.map(client => 
                 <ul key={client.id}>
                     <li >
-                    <Link to= {`clients/${client.id}/events`}>
-                       
+                    {/* <Link to= {`clients/${client.id}/events`}> */}
+                    <Link to= {`clients/${client.id}`}>
                         {client.last_name},{client.first_name}
                     
                     </Link>

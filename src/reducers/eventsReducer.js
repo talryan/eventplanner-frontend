@@ -5,6 +5,9 @@ export const eventsReducer = (state = [], action) => {
             
         case 'FETCH_CLIENT_EVENTS':
             return action.payload
+
+        case 'ADD_EVENT': 
+            return [...state,action.payload]
         default: 
         return state
     

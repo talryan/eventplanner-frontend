@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 import {fetchClientEvents} from '../../actions/eventActions'
 import DisplayDate from '../DisplayDate'
 import EventForm from '../events/EventForm'
+// import Client from '../../components/clients/Client'
 
 class ClientEvents extends Component {
     componentDidMount() {
@@ -19,24 +20,25 @@ class ClientEvents extends Component {
         return(
         <div>
            
-        <EventForm />
+        {/* <EventForm /> */}
         </div>
         )
     }
 
     render() {
-     
+      
         return (
             <div className='client-events'>
                 <h1> Client Info</h1>
+             
                 <h1>Event History:</h1>
                 <button onClick = {this.displayForm}> Add Event</button>
-                {/* <EventForm hidden ='true' clientId = {this.props.client.id}/> */}
+                <EventForm hidden ='true' clientId = {this.props.client.id}/>
                 <h4> add conditional for no events to display no events</h4> 
                 {this.filterEvents().map(event => 
                     <ul key={event.id}>
                         <li >
-                        <Link to= {`${this.props.routeInfo.location.pathname}/${event.id}`}>
+                        <Link to= {`${this.props.routeInfo.location.pathname}/events/${event.id}`}> 
                      
                             {DisplayDate(event.date)} - {event.event_name}
                         
@@ -51,8 +53,6 @@ class ClientEvents extends Component {
     
     };
 }
-const mapStateToProps = state => {
-    return { events: state.events } 
-}
 
-export default connect(mapStateToProps, {fetchClientEvents})(ClientEvents);
+
+export default connect(null, {fetchClientEvents})(ClientEvents);

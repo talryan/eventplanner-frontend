@@ -9,7 +9,7 @@
   import {fetchEvents} from './actions/eventActions'
   import MainContainer from './containers/MainContainer';
   import Header from './components/Header/Header'
-
+  import './App.css';
  
 
   class App extends Component {

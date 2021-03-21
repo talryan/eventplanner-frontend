@@ -26,7 +26,16 @@ class EventForm extends Component {
     handleSubmit = e => {
         e.preventDefault()
         this.props.addEvent(this.state) //either accept another argument, {...state, client_id: )}
-        e.target.reset()
+        this.setState({   
+        event_name: '',
+        date: '',
+        time: '',
+        total: '',
+        classification: '',
+        status: '',
+        details: ''
+        })
+       
     }
 
     render() {
@@ -46,7 +55,7 @@ class EventForm extends Component {
                 <br/>
 
                 <label>Total: $</label>
-                <input type='numeric' value={this.state.grad_date} onChange={this.handleChange} name='total'required/>
+                <input type='numeric' value={this.state.total} onChange={this.handleChange} name='total'required/>
                 <br/>
 
                 <label>Occasion: </label>

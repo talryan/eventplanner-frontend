@@ -18,17 +18,22 @@ class ClientsContainer extends Component {
             <div className='clients-container'> 
                 <Switch>
                     <Route exact path='/clients/new' component={ClientForm} />
-                    <Route exact path='/clients/:id'component={Client}/>
-                    <Route exact path='/clients/:id/events/:id' component={(routeInfo)=> {
-                        console.log(this.props.events)
-                       return <ClientEvent routeInfo={routeInfo} /> 
+                    <Route exact path='/clients/:id' component={(routeInfo) => {
+                        const id = parseInt(routeInfo.match.params.id)
+                        const client = this.props.clients.find(c => c.id === id)
+                        return !! client ? <Client routeInfo={routeInfo} client={client}/> :
+                        <div>Loading...</div>
                     } } />
-                    <Route path='/clients/:id/events' component={(routeInfo) => {
+                    <Route exact path='/clients/:id/events/:id' component={(routeInfo)=> {
+                    return <ClientEvent routeInfo={routeInfo} /> 
+                    //    return <ClientEvent routeInfo={routeInfo} /> 
+                    } } />
+                    {/* <Route path='/clients/:id/events' component={(routeInfo) => {
                         const id = parseInt(routeInfo.match.params.id)
                         const client = this.props.clients.find(c => c.id === id)
                         return !! client ? <ClientEvents routeInfo={routeInfo} client={client}/> :
                         <div>Loading...</div>
-                    } } />
+                    } } /> */}
                     <Route exact path='/clients' component={ Clients } />
                    
                 </Switch>
@@ -39,7 +44,7 @@ class ClientsContainer extends Component {
 }
 
 const mapStateToProps = state => {
-    console.log(state)
+
     return {
         clients: state.clients,
        
