@@ -1,6 +1,5 @@
 import React from 'react';
 import { connect } from 'react-redux'
-import ClientEvents from '../events/ClientEvents'
  import {Link} from 'react-router-dom'
   import EventForm from '../events/EventForm'
 
@@ -13,7 +12,7 @@ import ClientEvents from '../events/ClientEvents'
 
     client = () => this.props.clients.find(c => c.id === this.state.id)
     events = () => {
-       return  this.props.events.filter(event => event.client_id == this.state.id)
+       return  this.props.events.filter(event => event.client_id === this.state.id)
     }
 
     handleOnClick = () => {
@@ -41,7 +40,14 @@ import ClientEvents from '../events/ClientEvents'
     return (
         <div className='client-show'> 
             <div>
-          First Name: {this.client().first_name} Last Name: {this.client().last_name}
+                <h2> Contact Infomation</h2>
+                   <h3>  First Name: </h3><h4>{this.client().first_name} </h4>
+                   <h3>  Last Name: </h3><h4>{this.client().last_name} <br /></h4>
+                   <h3> Email:</h3><h4> {this.client().email}<br /></h4>
+                   <h3> Phone Number:</h3><h4> {this.client().phone_number}<br /></h4>
+                   <h3>  Company:</h3><h4> {this.client().company}</h4>
+                  <h2>Events:</h2> 
+
                 {this.mapEvents()}
                </div>
         

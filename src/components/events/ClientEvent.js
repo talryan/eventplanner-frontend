@@ -10,8 +10,13 @@ class ClientEvent extends React.Component {
         console.log(event)
         return (
             <div className='client-event'> 
+                Name: {event.event_name} <br />
                 Date: {DisplayDate(event.date)}  <br />
-                Time: {event.time}
+                Time: {event.time} <br />
+                Status: {event.status} <br />
+                Occasion: {event.classification} <br />
+                Details: {event.details}
+
 
             </div>
         )
@@ -20,7 +25,7 @@ class ClientEvent extends React.Component {
         console.log(this.props)
     return (
         <div className='no-event'> 
-            <h1> WE DID IT! </h1>
+            
             {this.props ? this.eventInfo() : <h1> no events</h1>}
 
         </div>

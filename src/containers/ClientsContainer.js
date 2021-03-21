@@ -6,7 +6,7 @@ import Clients from '../components/clients/Clients'
 // import EventsContainer from '../containers/EventsContainer'
 import ClientForm from '../components/clients/ClientForm'
 import Client from '../components/clients/Client'
-import ClientEvents from '../components/events/ClientEvents'
+
 import ClientEvent from '../components/events/ClientEvent'
 
 class ClientsContainer extends Component {
