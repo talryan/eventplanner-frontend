@@ -3,7 +3,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
 import {fetchEvents} from '../actions/eventActions'
-
+import Events from '../components/events/Events'
 
 
 
@@ -14,8 +14,8 @@ class EventsContainer extends Component {
     render() {
         return (
             <div className='events-container'> 
-              
-                Put Event Calendar Here <br />
+              <Events />
+             
                  
             </div>
         );

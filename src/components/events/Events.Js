@@ -1,11 +1,28 @@
 import React from 'react';
+import { connect } from 'react-redux'
+import {fetchEvents} from '../../actions/eventActions'
+import DisplayDate from '../DisplayDate'
 
-const Events = () => {
+const Events = ({events}) => {
     return (
         <div>
-        Make Table here!
+            <h1>Events</h1>
+            {events.map(event => 
+                <ul key={event.id}>
+                    <li >
+                    {DisplayDate(event.date)} - {event.event_name}
+
+                    </li>
+                </ul>
+        )}
         </div>
     );
 };
 
-export default Events;
+
+
+const mapStateToProps = state => {
+    return { events: state.events }
+}
+
+export default connect(mapStateToProps, {fetchEvents})(Events);

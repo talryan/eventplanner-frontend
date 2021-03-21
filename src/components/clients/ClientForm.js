@@ -10,7 +10,8 @@ class ClientForm extends Component {
         last_name: '',
         phone_number: '',
         email: '',
-        company_name: ''
+        company_name: '',
+        inputValue: ''
     }
 
     handleChange = e => {
