@@ -2,6 +2,7 @@
     import { connect } from 'react-redux'
     import {Link} from 'react-router-dom'
     import EventForm from '../events/EventForm'
+    import DisplayDate from '../DisplayDate'
 
     class Client extends React.Component {
         state = {
@@ -29,7 +30,7 @@
                  return this.events().map(event => {
                     return <div>
                         
-                    <h3> <Link to= {`${this.props.routeInfo.match.url}/events/${event.id}`}> {event.event_name}</Link> </h3><br /> 
+                    <h3> <Link to= {`${this.props.routeInfo.match.url}/events/${event.id}`}> {DisplayDate(event.date)} - {event.event_name}</Link> </h3><br /> 
                     </div>
             }
             )
@@ -44,7 +45,7 @@
                     <h3> <strong>Name:</strong> {this.client().first_name} {this.client().last_name} </h3>
                     <h3> <strong>Email:</strong> {this.client().email} </h3>
                     <h3> <strong>Phone Number:</strong> {this.client().phone_number}</h3> 
-                    <h3><strong>Company:</strong> </h3><h4> {this.client().company}</h4>
+                    <h3><strong>Company:</strong> </h3><h4> {this.client().company_name}</h4>
                     <h2><strong>Events:</strong></h2> 
 
                     {this.mapEvents()}

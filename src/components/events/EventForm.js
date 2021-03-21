@@ -9,7 +9,6 @@ class EventForm extends Component {
         date: '',
         time: '',
         total: '',
-        classification: '',
         status: '',
         details: '',
         client_id: this.props.clientId
@@ -31,7 +30,7 @@ class EventForm extends Component {
         date: '',
         time: '',
         total: '',
-        classification: '',
+       
         status: '',
         details: ''
         })
@@ -58,9 +57,7 @@ class EventForm extends Component {
                 <input type='numeric' value={this.state.total} onChange={this.handleChange} name='total'required/>
                 <br/>
 
-                <label>Occasion: </label>
-                <input type='text' value={this.state.classification} onChange={this.handleChange} name='classification'required/>
-                <br/>
+            
 
                 <label>Status: </label>
                 <br/>
