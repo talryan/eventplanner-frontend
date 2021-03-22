@@ -12,9 +12,11 @@ const Clients = ({ clients }) => {
             
             <input type="text"
              placeholder = "Search By Name" 
+             // eslint-disable-next-line 
              onChange={event => {setSearchTerm(event.target.value)} }/>
-
-            {clients.filter((val)=> {
+            
+            { // eslint-disable-next-line 
+            clients.filter((val)=> {
                 if (searchTerm === ""){
                 return val
             }   else if (val.first_name.toLowerCase().includes(searchTerm.toLowerCase())){
