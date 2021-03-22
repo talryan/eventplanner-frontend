@@ -6,6 +6,7 @@ import {Doughnut} from 'react-chartjs-2'
 class EventChart extends Component {
 render(){
 return <div>
+    <h1 > Total Number of Events: {this.props.totalEvents} </h1>
     <Doughnut
     data={{
         labels: ['Tentative', 'Confirmed', 'Cancelled', 'Closed'],
@@ -44,8 +45,8 @@ const mapStateToProps = ({events}, ownProps) => {
     const confirmedStatus= events.filter(event => event.status === "Confirmed").length
     const cancelledStatus= events.filter(event => event.status === "Cancelled").length
     const closedStatus= events.filter(event => event.status === "Closed").length
-  
-    return{tentativeStatus, confirmedStatus, cancelledStatus, closedStatus}
+    const totalEvents= events.length
+    return{tentativeStatus, confirmedStatus, cancelledStatus, closedStatus, totalEvents}
   
 }
 

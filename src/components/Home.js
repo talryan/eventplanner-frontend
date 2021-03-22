@@ -1,11 +1,12 @@
 import React from 'react';
 import EventChart from './EventChart'
+// import Dashboard from '../components/Dashboard'
 const Home = () => {
     return (
         <div className='home-display'>
-        <h1> Hello! </h1>
+
         <EventChart />
-        Display Today's Events
+       {/* <Dashboard /> */}
         </div>
     );
 };

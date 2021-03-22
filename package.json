@@ -11,6 +11,7 @@
     "date-fns": "^2.19.0",
     "igniteui-react-charts": "^16.13.1",
     "igniteui-react-core": "^16.13.1",
+    "moment": "^2.29.1",
     "react": "^17.0.1",
     "react-bootstrap": "^1.5.2",
     "react-chartjs-2": "^2.11.1",

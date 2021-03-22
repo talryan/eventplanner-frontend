@@ -28,7 +28,7 @@
             }
             else {
                  return this.events().map(event => {
-                    return <div>
+                    return <div key={event.id}>
                         
                     <h3> <Link to= {`${this.props.routeInfo.match.url}/events/${event.id}`}> {DisplayDate(event.date)} - {event.event_name}</Link> </h3><br /> 
                     </div>

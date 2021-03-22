@@ -13,10 +13,7 @@ li{
     border: 1px black solid;
 }
 
-.radio {
-    display: block;
-    width: 1em;
-    height: 1em;
-    border-radius: 50%;
-    border: 0.1em solid currentColor;
+.w3-bar w3-red w3-card w3-left-align w3-large{
+    background-color: yellow;
 }
+
