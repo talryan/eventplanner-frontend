@@ -8,9 +8,9 @@ const Clients = ({ clients }) => {
 
     return (
         <div className='clients-index'> 
-            <h1>Please Select A Client :</h1>
+            <h1 className = 'clients-index-title'>Rolodex:</h1>
             
-            <input type="text"
+            <input type="text" className="searchbar"
              placeholder = "Search By Name" 
              // eslint-disable-next-line 
              onChange={event => {setSearchTerm(event.target.value)} }/>
@@ -25,10 +25,10 @@ const Clients = ({ clients }) => {
             }).map(client => 
                 <ul key={client.id}>
                     <li >
-                    <Link to= {`clients/${client.id}`}>
+                   <h3> <Link to= {`clients/${client.id}`}>
                         {client.last_name},{client.first_name}
                     
-                    </Link>
+                    </Link></h3>
                     </li>
                 </ul>
         )}

@@ -6,14 +6,15 @@ import { Link } from 'react-router-dom'
 
 const Events = ({events}) => {
     return (
-        <div>
-            <h1>Events</h1>
+          
+        <div className= 'all-events-show'>
+            <h1 className='events-show-h1'>Events</h1>
             {events.map(event => 
                 <ul key={event.id}>
                     <li >
-                    <Link to= {`clients/${event.client_id}/events/${event.id}`}>
+                    <h3><Link to= {`clients/${event.client_id}/events/${event.id}`}>
                      {DisplayDate(event.date)} - {event.event_name}
-                    </Link>
+                    </Link></h3>
                     </li>
                 </ul>
         )}

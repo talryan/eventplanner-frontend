@@ -40,7 +40,7 @@ class EventForm extends Component {
     render() {
         return (
             <form className= "Event-Form" onSubmit={this.handleSubmit}>
-                <strong> Create New Event </strong> <br/>
+                <h3 className='create-event-h3'> Create New Event </h3> <br/>
                 <label>Event Name: </label>
                 <input type='text' value={this.state.event_name} onChange={this.handleChange} name='event_name' required/>
                 <br/>
@@ -70,7 +70,7 @@ class EventForm extends Component {
                 <label>Details:</label>
                 <input type='text' value={this.state.details} onChange={this.handleChange} name='details' required/> <br />
 
-                <input type='submit' value='Create Event' />
+                <input class='btn btn-dark' type='submit' value='Create Event' />
 
             
             </form>

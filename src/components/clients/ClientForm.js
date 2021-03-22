@@ -35,8 +35,8 @@ class ClientForm extends Component {
 
     render() {
         return (
-            <form onSubmit={this.handleSubmit}>
-                <strong> Create New Client</strong> <br/>
+            <form className='client-form' onSubmit={this.handleSubmit}>
+                <h2 className="client-form-title"> Create New Client</h2> <br/>
                 <label>First Name </label>
                 <input type='text' value={this.state.first_name} onChange={this.handleChange} name='first_name' required/>
                 <br/>
@@ -58,7 +58,7 @@ class ClientForm extends Component {
                 <br/><br />
              
 
-                <input type='submit' value='Create Client' />
+                <input class="btn btn-dark" type='submit' value='Create Client' />
 
             
             </form>

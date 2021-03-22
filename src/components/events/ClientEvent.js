@@ -9,14 +9,15 @@ class ClientEvent extends React.Component {
         let event = this.props.events.find(event => event.id === parseInt(this.props.routeInfo.match.params.id))
         return (
             <div className='client-event'> 
-                Name: {event.event_name} <br />
-                Date: {DisplayDate(event.date)}  <br />
-                Time: {DisplayTime(event.time)} <br />
-                Status: {event.status} <br />
-                Details: {event.details}<br />
-                Total: ${event.total}<br />
+            <h2> Event Details:</h2>
+                <h3>Name: {event.event_name} </h3><br />
+                <h3>Date: {DisplayDate(event.date)} </h3> <br />
+                <h3>Time: {DisplayTime(event.time)}</h3> <br />
+                <h3>Status: {event.status}</h3> <br />
+                <h3> Details: {event.details}</h3><br />
+                <h3>Total: ${event.total}</h3><br />
 
-                <button>Edit Event</button>
+                <button type="button" class="btn btn-dark">Edit Event</button>
 
             </div>
         )

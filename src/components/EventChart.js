@@ -5,8 +5,8 @@ import {Doughnut} from 'react-chartjs-2'
 
 class EventChart extends Component {
 render(){
-return <div>
-    <h1 > Total Number of Events: {this.props.totalEvents} </h1>
+return <div className='event-chart'>
+    <h1 className = 'total-events-h1'> Total Number of Events: {this.props.totalEvents} </h1>
     <Doughnut
     data={{
         labels: ['Tentative', 'Confirmed', 'Cancelled', 'Closed'],

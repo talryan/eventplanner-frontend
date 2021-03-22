@@ -24,11 +24,11 @@
 
         mapEvents = () => {
             if (this.events().length === 0) {
-                return <h1> No Events</h1>
+                return <h1 className='no-events'> No Events</h1>
             }
             else {
                  return this.events().map(event => {
-                    return <div key={event.id}>
+                    return <div className='event-map' key={event.id}>
                         
                     <h3> <Link to= {`${this.props.routeInfo.match.url}/events/${event.id}`}> {DisplayDate(event.date)} - {event.event_name}</Link> </h3><br /> 
                     </div>
@@ -45,15 +45,15 @@
                     <h3> <strong>Name:</strong> {this.client().first_name} {this.client().last_name} </h3>
                     <h3> <strong>Email:</strong> {this.client().email} </h3>
                     <h3> <strong>Phone Number:</strong> {this.client().phone_number}</h3> 
-                    <h3><strong>Company:</strong> </h3><h4> {this.client().company_name}</h4>
+                    <h3><strong>Company:</strong> {this.client().company_name}</h3>
                     <h2><strong>Events:</strong></h2> 
 
                     {this.mapEvents()}
              
-            
+                    
         
 
-            <button onClick={this.handleOnClick} > Add Event</button>
+            <button class="btn btn-dark" onClick={this.handleOnClick} > Add Event</button>
             {this.state.showEvent ? <EventForm clientId = {this.client().id} /> : null}
 
             

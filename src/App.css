@@ -17,3 +17,124 @@ li{
     background-color: yellow;
 }
 
+.all-events-show{
+    margin-top: 100px;
+    left: 30px;
+    text-align: center;
+    border: 3px white;
+    border-style: double;
+    color: #4252af;
+    font: roboto;
+    background: whitesmoke;
+}
+
+.event-chart{
+    text-align: center;
+    background: whitesmoke;
+
+     
+}
+
+.total-events-h1{
+    color: #4252af;
+    border-style: double;
+    border-radius:auto;
+    
+}
+
+.events-show-h1{
+    color: #4252af;
+    border-style: double;
+    border-radius:auto;
+}
+
+.clients-index{
+    margin-top: 100px;
+    left: 30px;
+    text-align: center;
+    border: 3px white;
+    border-style: double;
+    color: #4252af;
+    font: roboto;
+    background: whitesmoke;
+}
+
+.clients-index-title{
+    color: #4252af;
+    border-style: double;
+    border-radius:auto;
+}
+
+.searchbar{
+    text-align: center;
+    color: #4252af;
+}
+
+.client-form{
+    margin-top: 100px;
+    left: 30px;
+    text-align: center;
+    border: 3px white;
+    border-style: double;
+    color: #4252af;
+    font: roboto;
+}
+
+.client-form-title{
+    color: #4252af;
+    border-style: double;
+    border-radius:auto;
+}
+
+.no-events{
+color: darkred
+}
+
+.client-show{
+    margin-top: 100px;
+    left: 30px;
+    text-align: center;
+    border: 3px white;
+    border-style: double;
+    color: #4252af;
+    font: roboto;  
+}
+
+.Event-Form{
+    margin-top: 100px;
+    left: 30px;
+    text-align: center;
+    border: 3px white;
+    border-style: double;
+    color: #4252af;
+    font: roboto;
+}
+
+.create-event-h3{
+    color: #4252af;
+    border-style: double;
+    border-radius:auto;
+}
+
+.client-event{
+    margin-top: 100px;
+    left: 30px;
+    text-align: center;
+    border: 3px white;
+    border-style: double;
+    color: #4252af;
+    font: roboto; 
+}
+
+
+
+body{
+    background: whitesmoke; 
+}
+
+
+.btn{
+    background-color: #96cce8; 
+    border-radius: 4px; 
+    color:whitesmoke
+}
