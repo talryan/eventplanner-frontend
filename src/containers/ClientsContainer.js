@@ -28,12 +28,7 @@ class ClientsContainer extends Component {
                     return <ClientEvent routeInfo={routeInfo} /> 
                     //    return <ClientEvent routeInfo={routeInfo} /> 
                     } } />
-                    {/* <Route path='/clients/:id/events' component={(routeInfo) => {
-                        const id = parseInt(routeInfo.match.params.id)
-                        const client = this.props.clients.find(c => c.id === id)
-                        return !! client ? <ClientEvents routeInfo={routeInfo} client={client}/> :
-                        <div>Loading...</div>
-                    } } /> */}
+
                     <Route exact path='/clients' component={ Clients } />
                    
                 </Switch>

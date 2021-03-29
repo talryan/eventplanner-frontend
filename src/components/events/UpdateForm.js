@@ -1,16 +1,16 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
-import { addEvent } from '../../actions/eventActions'
+import { updateEvent } from '../../actions/eventActions'
 
-class EventForm extends Component {
+class UpdateForm extends Component {
 
-    state = { 
-        event_name: '',
-        date: '',
-        time: '',
-        total: '',
-        status: '',
-        details: '',
+    state = {  
+        event_name: this.props.event.event_name,
+        date: this.props.event.date,
+        time: this.props.event.time,
+        total: this.props.event.total,
+        status: this.props.event.status,
+        details: this.props.event.details,
         client_id: this.props.clientId
     }
 
@@ -24,7 +24,7 @@ class EventForm extends Component {
 
     handleSubmit = e => {
         e.preventDefault()
-        this.props.addEvent(this.state) //either accept another argument, {...state, client_id: )}
+        this.props.updateEvent(this.state) 
         this.setState({   
         event_name: '',
         date: '',
@@ -38,8 +38,8 @@ class EventForm extends Component {
 
     render() {
         return (
-            <form className= "Event-Form" onSubmit={this.handleSubmit}>
-                <h3 className='create-event-h3'> Create New Event </h3> <br/>
+            <form className= "Update-Form" onSubmit={this.handleSubmit}>
+                <h3 className='create-event-h3'> Edit Event </h3> <br/>
                 <label>Event Name: </label>
                 <input type='text' value={this.state.event_name} onChange={this.handleChange} name='event_name' required/>
                 <br/>
@@ -69,7 +69,7 @@ class EventForm extends Component {
                 <label>Details:</label>
                 <input type='text' value={this.state.details} onChange={this.handleChange} name='details' required/> <br />
 
-                <input className='btn btn-dark' type='submit' value='Create Event' />
+                <input className='btn btn-dark' type='submit' value='Edit Event' />
 
             
             </form>
@@ -78,4 +78,11 @@ class EventForm extends Component {
     }
 }
 
-export default connect(null, { addEvent })(EventForm);
+
+const mapStateToProps = ({events}, ownProps) => {
+    console.log(ownProps.routeInfo)
+    const event = events.find(thisEvent => thisEvent.id === parseInt(ownProps.routeInfo.match.params.id))
+    return {event}
+}
+
+export default connect(mapStateToProps,{ updateEvent })(UpdateForm);

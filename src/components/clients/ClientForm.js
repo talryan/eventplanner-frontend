@@ -58,7 +58,7 @@ class ClientForm extends Component {
                 <br/><br />
              
 
-                <input class="btn btn-dark" type='submit' value='Create Client' />
+                <input className="btn btn-dark" type='submit' value='Create Client' />
 
             
             </form>

@@ -1,8 +1,26 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { fetchEvents } from '../../actions/eventActions'
 import DisplayDate from '../DisplayDate'
 import DisplayTime from '../DisplayTime'
+// import UpdateForm from './UpdateForm'
 class ClientEvent extends React.Component {
+    // state = {
+    //     id: parseInt(this.props.routeInfo.match.params.id),
+    //     showForm: false
+    // }
+
+    // handleOnClick = () => {
+    //     this.setState(prevState => ({
+    //         showForm: !prevState.showForm
+    //     }))
+    // }
+
+    
+
+    // events = () => {
+    //     return  this.props.events.filter(event => event.client_id === this.state.id)
+    // }
 
     eventInfo() {
 
@@ -17,17 +35,19 @@ class ClientEvent extends React.Component {
                 <h3> Details: {event.details}</h3><br />
                 <h3>Total: ${event.total}</h3><br />
 
-                <button type="button" class="btn btn-dark">Edit Event</button>
-
+{/*                
+                <button className="btn btn-dark" onClick={this.handleOnClick} > Edit Event</button>
+            {this.state.showForm ? <UpdateForm clientId = {this.events().id} /> : null} */}
+            
             </div>
         )
     }
     render() {
-        console.log(this.props)
+    
     return (
-        <div className='no-event'> 
+        <div > 
             
-            {this.props ? this.eventInfo() : <h1> no events</h1>}
+            {this.eventInfo()}
 
         </div>
 
@@ -38,10 +58,9 @@ class ClientEvent extends React.Component {
 const mapStateToProps = state => {
   
     return {
-        events: state.events,
+        events: state.events
        
     }
 }
 
-
-export default connect(mapStateToProps)(ClientEvent)
+export default connect(mapStateToProps, { fetchEvents })(ClientEvent)

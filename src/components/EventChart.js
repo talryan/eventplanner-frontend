@@ -28,8 +28,8 @@ return <div className='event-chart'>
             }
         ]
     }}
-    height={400}
-    width = {600}
+    height={250}
+    width = {400}
     options= {{maintainAspectRatio: false }}
   
     />

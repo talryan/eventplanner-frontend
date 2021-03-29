@@ -53,7 +53,7 @@
                     
         
 
-            <button class="btn btn-dark" onClick={this.handleOnClick} > Add Event</button>
+            <button className="btn btn-dark" onClick={this.handleOnClick} > Add Event</button>
             {this.state.showEvent ? <EventForm clientId = {this.client().id} /> : null}
 
             
