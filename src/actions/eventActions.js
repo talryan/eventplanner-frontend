@@ -28,15 +28,3 @@ export const fetchClientEvents = client_id => {
     }
 }
 
-export const updateEvent = (updateEvent) => {
-    return dispatch => {
-        fetch('http://127.0.0.1:3000/events', {
-            method: 'PATCH',
-            body: JSON.stringify(updateEvent),
-            headers: { 'Content-Type': 'application/json'}
-        })
-        .then(resp => resp.json())
-        .then(updateEvent => dispatch({ type: 'UPDATE_EVENT', payload: updateEvent}))
-    }
-   
-}

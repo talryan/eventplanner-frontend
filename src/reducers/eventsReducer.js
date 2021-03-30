@@ -8,10 +8,11 @@ export const eventsReducer = (state = [], action) => {
 
         case 'ADD_EVENT': 
             return [...state,action.payload]
+       
+
         default: 
         return state
     
     }
 }
-
 
