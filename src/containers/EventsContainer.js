@@ -8,9 +8,7 @@ import Events from '../components/events/Events'
 
 
 class EventsContainer extends Component {
-    // componentDidMount() {
-    //     this.props.fetchEvents()
-    // }
+ 
     render() {
         return (
             <div className='events-container'> 

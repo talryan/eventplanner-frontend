@@ -1,8 +1,8 @@
-// import { format} from 'date-fns'
+import { format} from 'date-fns'
 
 
-// const DisplayTime = (time) => {
-//     return format(new Date(`${time}`),'K:m a')
-// }
+const DisplayTime = (time) => {
+    return format(new Date(`${time}`),'K:m a')
+}
 
-// export default DisplayTime
+export default DisplayTime
