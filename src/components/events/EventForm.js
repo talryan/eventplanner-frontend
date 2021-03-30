@@ -24,7 +24,7 @@ class EventForm extends Component {
 
     handleSubmit = e => {
         e.preventDefault()
-        this.props.addEvent(this.state) //either accept another argument, {...state, client_id: )}
+        this.props.addEvent(this.state)
         this.setState({   
         event_name: '',
         date: '',

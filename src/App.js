@@ -14,7 +14,9 @@
 
   class App extends Component {
       componentDidMount() {
+          console.log('a')
       this.props.dispatchFetchEvents()
+      console.log('b')
       }
 
       render() {
@@ -46,7 +48,8 @@
             </div>
       );
       }
-
+    
+      //this dispatch cause a reducer to run
       const mapDispatchToProps = (dispatch) => {
           return {dispatchFetchEvents: () => dispatch(fetchEvents())}
       }

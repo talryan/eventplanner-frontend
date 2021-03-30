@@ -25,21 +25,21 @@ class ClientEvent extends React.Component {
     }
     render() {
     
-    return (
-        <div > 
-            
-            {this.props.event ? this.eventInfo() : <h1> Not Found </h1>}
+        return (
+            <div > 
+                
+                {this.props.event ? this.eventInfo() : <h1> Not Found </h1>}
 
-        </div>
+            </div>
 
-    )
+        )
     }
 
 }
-const mapStateToProps = ({events}, ownProps) => {
-    const event = events.find(thisEvent => thisEvent.id === parseInt(ownProps.routeInfo.match.params.id))
-    console.log(event)
-    return {event}
-}
+    const mapStateToProps = ({events}, ownProps) => {
+        const event = events.find(thisEvent => thisEvent.id === parseInt(ownProps.routeInfo.match.params.id))
+    
+        return {event}
+    }
 
 export default connect(mapStateToProps, { fetchEvents })(ClientEvent)

@@ -1,8 +1,11 @@
 export const fetchEvents = () => {
     return dispatch => {
+        console.log('c')
         fetch('http://127.0.0.1:3000/events')
         .then(resp => resp.json())
-        .then(events => dispatch({ type: 'FETCH_EVENTS', payload: events}))
+        .then(events => { console.log('d')
+            dispatch({ type: 'FETCH_EVENTS', payload: events})})
+        
     }
 }
 

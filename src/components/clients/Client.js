@@ -7,7 +7,8 @@
     class Client extends React.Component {
         state = {
             id: parseInt(this.props.routeInfo.match.params.id),
-            showEvent: false
+            showEvent: false, 
+          
         }
 
         client = () => this.props.clients.find(c => c.id === this.state.id)
@@ -21,6 +22,7 @@
                 showEvent: !prevState.showEvent
             }))
         }
+      
 
         mapEvents = () => {
             if (this.events().length === 0) {
@@ -30,9 +32,11 @@
                  return this.events().map(event => {
                     return <div className='event-map' key={event.id}>
                         
-                    <h3> <Link to= {`${this.props.routeInfo.match.url}/events/${event.id}`}> {DisplayDate(event.date)} - {event.event_name}</Link> </h3><br /> 
+                    <h3> <Link to= {`${this.props.routeInfo.match.url}/events/${event.id}`}> {DisplayDate(event.date)} - {event.event_name} </Link> </h3><br />
+                    
                     </div>
             }
+            
             )
         }
             
@@ -50,7 +54,7 @@
 
                     {this.mapEvents()}
              
-                    
+                   
         
 
             <button className="btn btn-dark" onClick={this.handleOnClick} > Add Event</button>
@@ -63,9 +67,9 @@
         }
 };
 
-const mapStateToProps = state => {
-    return { clients: state.clients, 
-        events: state.events
+const mapStateToProps = stateFromTheStore => {
+    return { clients: stateFromTheStore.clients, 
+        events: stateFromTheStore.events
     }
 }
   
