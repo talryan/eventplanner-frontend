@@ -23,7 +23,7 @@ License: Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0
 
 STATUS: Near complete, barring tweaks to style.
 
-CONTRIBUTORS: This is my fifth and final project for Flatiron School. I don't expect this to grow into an internet sensation. If you want to add to it, just email me at natalie.hummel@gmail.com and let me know.
+CONTRIBUTORS: This is my fifth and final project for Flatiron School. I don't expect this to grow into an internet sensation. If you want to add to it, just email me at nataliamryan@gmail.com and let me know.
 
 Getting Started with Create React App
 This project was bootstrapped with Create React App.
