@@ -1,39 +1,32 @@
-li{
-    list-style-type: none;
-}
+body, html {
+    height: 100%;
+    font-family: "Inconsolata", sans-serif;
+  }
+  
+  .bgimg {
+    background-position: center;
+    background-size: cover;
+    background-image: 'public/tablesetting.jpg';
 
-.client-show {
-    left: 30px;
-    text-align: center;
-    border: 1px black solid;
-}
+  }
 
-.Event-Form {
-    text-align: center;
-    border: 1px black solid;
-}
+  .w3-input w3-padding-16 w3-border{
+    align-items: center;
+  }
 
-.w3-bar w3-red w3-card w3-left-align w3-large{
-    background-color: yellow;
-}
+  .w3-tag w3-wide{
+      background: red;
+  }
 
-.all-events-show{
-    margin-top: 100px;
-    left: 30px;
-    text-align: center;
-    border: 3px white;
-    border-style: double;
-    color: #4252af;
-    font: roboto;
-    background: whitesmoke;
-}
 
-.event-chart{
+
+  .event-chart{
     text-align: center;
     background: whitesmoke;
 
      
 }
+
 
 .total-events-h1{
     color: #4252af;
@@ -42,99 +35,19 @@ li{
     
 }
 
-.events-show-h1{
-    color: #4252af;
-    border-style: double;
-    border-radius:auto;
-}
-
-.clients-index{
+.all-events-show{
     margin-top: 100px;
     left: 30px;
     text-align: center;
     border: 3px white;
     border-style: double;
-    color: #4252af;
+    color: black;
+    background-image: url("img/tablesetting.jpg") ;
     font: roboto;
-    background: whitesmoke;
-}
 
-.clients-index-title{
-    color: #4252af;
-    border-style: double;
-    border-radius:auto;
-}
+    list-style-type: none;
 
-.searchbar{
-    text-align: center;
-    color: #4252af;
-}
-
-.client-form{
-    margin-top: 100px;
-    left: 30px;
-    text-align: center;
-    border: 3px white;
-    border-style: double;
-    color: #4252af;
-    font: roboto;
-}
-
-.client-form-title{
-    color: #4252af;
-    border-style: double;
-    border-radius:auto;
-}
-
-.no-events{
-color: darkred
-}
-
-.client-show{
-    margin-top: 100px;
-    left: 30px;
-    text-align: center;
-    border: 3px white;
-    border-style: double;
-    color: #4252af;
-    font: roboto;  
-}
-
-.Event-Form{
-    margin-top: 100px;
-    left: 30px;
-    text-align: center;
-    border: 3px white;
-    border-style: double;
-    color: #4252af;
-    font: roboto;
-}
-
-.create-event-h3{
-    color: #4252af;
-    border-style: double;
-    border-radius:auto;
-}
-
-.client-event{
-    margin-top: 100px;
-    left: 30px;
-    text-align: center;
-    border: 3px white;
-    border-style: double;
-    color: #4252af;
-    font: roboto; 
 }
 
 
 
-body{
-    background: whitesmoke; 
-}
-
-
-.btn{
-    background-color: #96cce8; 
-    border-radius: 4px; 
-    color:whitesmoke
-}

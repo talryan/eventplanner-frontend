@@ -10,10 +10,9 @@ const Events = ({events}) => {
     return (
           
         <div className= 'all-events-show'>
-            <h1 className='events-show-h1'>Events</h1>
-            <input type="text" className="searchbar"
+            <h5 className="w3-center w3-padding-64"><span className="w3-tag w3-wide">EVENT LIST</span></h5>
+            <input input class="w3-input w3-padding-16 w3-border" type="text"
              placeholder = "Search By Name" 
-             // eslint-disable-next-line 
              onChange={event => {setSearchTerm(event.target.value)} }/>
             { // eslint-disable-next-line 
             events.filter((val)=> {
