@@ -3,37 +3,42 @@ body, html {
     font-family: "Inconsolata", sans-serif;
   }
   
-  .bgimg {
-    background-position: center;
-    background-size: cover;
-    background-image: 'public/tablesetting.jpg';
 
-  }
 
   .w3-input w3-padding-16 w3-border{
     align-items: center;
   }
 
-  .w3-tag w3-wide{
-      background: red;
-  }
 
+  .header {
+      padding-left: 500px;
+      position: fixed;
+      background: url(img/darkgreen.png);
+      background-position: center;
+      background-size: 300px;
+      background-repeat: no-repeat;
+     
+  }
+  .home-display{
+      padding-bottom: 500px;
+  }
 
 
   .event-chart{
     text-align: center;
-    background: whitesmoke;
-
+    padding: 55px;
+    background-size: auto;
      
+    }
+    .main-container{
+
+   background: url(img/trythis.png);
+   background-position: center;
+   background-size: cover;
 }
 
 
-.total-events-h1{
-    color: #4252af;
-    border-style: double;
-    border-radius:auto;
-    
-}
+
 
 .all-events-show{
     margin-top: 100px;
@@ -42,12 +47,16 @@ body, html {
     border: 3px white;
     border-style: double;
     color: black;
-    background-image: url("img/tablesetting.jpg") ;
+   
     font: roboto;
-
     list-style-type: none;
 
 }
 
+ul.no-bullets {
+    list-style-type: none; /* Remove bullets */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margins */
+  }
 
 

@@ -6,10 +6,15 @@ import {Doughnut} from 'react-chartjs-2'
 class EventChart extends Component {
 render(){
 return <div className='event-chart'>
-    <h1 className = 'total-events-h1'> Total Number of Events: {this.props.totalEvents} </h1>
+    <br />
+    <br />
+    <br />
+    <br />
+    <h1 className = "w3-center w3-padding-64"><span class="w3-tag w3-wide">TOTAL NUMBER OF EVENTS: {this.props.totalEvents}</span> </h1>
     <Doughnut
     data={{
-        labels: ['Tentative', 'Confirmed', 'Cancelled', 'Closed'],
+      
+      
         datasets: [
             {
             label: 'Events by Status', 
@@ -24,9 +29,11 @@ return <div className='event-chart'>
                 '#96ac9d',
                 '#c36643',
                 '#4c251b'
-            ]
+            ],
+           
             }
-        ]
+        ],
+        labels: ['Tentative', 'Confirmed', 'Cancelled', 'Closed']
     }}
     height={250}
     width = {600}

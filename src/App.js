@@ -22,8 +22,11 @@
       render() {
           return (
                   <div>
-                      <Header />
-                      <NavBar />
+                      <br />
+                        <Header />
+                     
+                        <NavBar />
+                        
                           <Switch>
                                   <Route exact path="/"> <MainContainer/> </Route>
                                   <Route exact path="/events">< Events /> </Route>
