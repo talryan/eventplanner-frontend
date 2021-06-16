@@ -10,7 +10,7 @@ const Clients = ({ clients }) => {
 
     return (
         <div className='clients-index'> 
-            <h1 className = 'clients-index-title'>Rolodex:</h1>
+            <h3 className="w3-center w3-padding-64"><span className="w3-tag w3-wide">ROLODEX:</span></h3>
             
             <input type="text" className="searchbar" placeholder = "Search By Name" value={searchTerm}
              // eslint-disable-next-line 
@@ -27,8 +27,8 @@ const Clients = ({ clients }) => {
             }).map(client => 
                 <ul key={client.id}>
                     <li >
-                   <h3> <Link to= {`clients/${client.id}`}>
-                        {client.last_name},{client.first_name} </Link>   </h3>
+                   <h5 className="w3-center w3-padding-64"><span className="w3-tag w3-wide"> <Link to= {`clients/${client.id}`}>
+                        {client.last_name},{client.first_name} </Link> </span>  </h5>
                 
                     </li>
                 </ul>

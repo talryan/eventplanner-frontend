@@ -2,16 +2,61 @@ body, html {
     height: 100%;
     font-family: "Inconsolata", sans-serif;
   }
-  
+  li{
+    list-style-type: none;
+}
 
+.Event-Form {
+    text-align: center;
+    border: 1px black solid;
+    border-width: auto;
+    color: white;
+    text-size-adjust: 20px;
+}
+.client-form{
+    margin-top: 100px;
+    left: 30px;
+    text-align: center;
+    border: 3px white;
+    border-style: double;
+    color: white;
+    font: roboto;
+}
 
-  .w3-input w3-padding-16 w3-border{
-    align-items: center;
-  }
+.contact {
+    text-align: center;
+}
+
+.no-events{
+    text-align: center;
+    color: maroon;
+}
+
+.btn{
+    background-color: #384d3a; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 25px;
+}
+.btn-1{
+    background-color: #384d3a; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+}
+
 
 
   .header {
-      padding-left: 500px;
+     padding:200px;
       position: fixed;
       background: url(img/darkgreen.png);
       background-position: center;
@@ -34,10 +79,8 @@ body, html {
 
    background: url(img/trythis.png);
    background-position: center;
-   background-size: cover;
+   background-size:cover;
 }
-
-
 
 
 .all-events-show{
@@ -45,12 +88,36 @@ body, html {
     left: 30px;
     text-align: center;
     border: 3px white;
+    background-color: transparent;
     border-style: double;
-    color: black;
-   
-    font: roboto;
     list-style-type: none;
+    
 
+}
+.events-container{
+    background: url(img/placemat.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding:400px;
+}
+.clients-container{
+    background: url(img/placemat.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding:400px;
+ 
+}
+
+.clients-index{
+    margin-top: 100px;
+    left: 30px;
+    text-align: center;
+    border: 3px black;
+    background-color: transparent;
+    border-style: double;
+    list-style-type: none;
 }
 
 ul.no-bullets {

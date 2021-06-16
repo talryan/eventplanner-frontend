@@ -39,26 +39,26 @@ class EventForm extends Component {
     render() {
         return (
             <form className= "Event-Form" onSubmit={this.handleSubmit}>
-                <h3 className='create-event-h3'> Create New Event </h3> <br/>
-                <label>Event Name: </label>
+                <h3 className="w3-center w3-padding-64"><span className="w3-tag w3-wide">Create New Event </span> </h3> 
+                <label className="event-form-label">Event Name: </label>
                 <input type='text' value={this.state.event_name} onChange={this.handleChange} name='event_name' required/>
                 <br/>
             
-                <label>Date: </label>
+                <label className="event-form-label">Date: </label>
                 <input type='date' value={this.state.date} onChange={this.handleChange} start='Date.now' name='date' required/>
                 <br/>
 
-                <label>Time: </label>
+                <label className="event-form-label">Time: </label>
                 <input type='time' value={this.state.time} onChange={this.handleChange} name='time' required/>
                 <br/>
 
-                <label>Total: $</label>
+                <label className="event-form-label">Total: $</label>
                 <input type='numeric' value={this.state.total} onChange={this.handleChange} name='total'required/>
                 <br/>
 
             
 
-                <label>Status: </label>
+                <label className="event-form-label">Status: </label>
                 <br/>
                     <input type='radio' className = 'tentative-selection' value={"Tentative"} checked={this.state.status === "Tentative"} onChange={this.handleChange} name='status'/> <label> Tentative </label> 
                     <input type='radio' className = 'confirmed-selection' value={"Confirmed"} checked={this.state.status === "Confirmed"} onChange={this.handleChange} name='status'/> <label> Confirmed </label>
@@ -67,9 +67,9 @@ class EventForm extends Component {
                 <br/>
 
                 <label>Details:</label>
-                <input type='text' value={this.state.details} onChange={this.handleChange} name='details' required/> <br />
+                <input type='text' value={this.state.details} onChange={this.handleChange} name='details' required/> <br /> <br />
 
-                <input className='btn btn-dark' type='submit' value='Create Event' />
+                <input className='btn-1' type='submit' value='Create Event' />
 
             
             </form>

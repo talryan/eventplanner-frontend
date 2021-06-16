@@ -23,11 +23,11 @@ const Events = ({events}) => {
             }
             }).map(event => 
                 <ul key={event.id}>
-                    <li >
-                    <h3><Link to= {`clients/${event.client_id}/events/${event.id}`}>
+                    
+                    <h3 className="w3-center w3-padding-64"><span className="w3-tag w3-wide"><Link to= {`clients/${event.client_id}/events/${event.id}`}>
                      {DisplayDate(event.date)} - {event.event_name}
-                    </Link></h3>
-                    </li>
+                    </Link></span></h3>
+                    
                 </ul>
         )}
         </div>

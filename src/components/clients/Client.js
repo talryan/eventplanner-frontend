@@ -45,19 +45,19 @@
         return (
             <div className='client-show'> 
                 
-                    <h2> <strong>Contact Infomation:</strong></h2>
-                    <h3> <strong>Name:</strong> {this.client().first_name} {this.client().last_name} </h3>
-                    <h3> <strong>Email:</strong> {this.client().email} </h3>
-                    <h3> <strong>Phone Number:</strong> {this.client().phone_number}</h3> 
-                    <h3><strong>Company:</strong> {this.client().company_name}</h3>
-                    <h2><strong>Events:</strong></h2> 
+                    <h2 className="w3-center w3-padding-64"><span className="w3-tag w3-wide"><strong>Contact Infomation:</strong></span></h2>
+                    <h3 className= "contact"> <strong>Name:</strong> {this.client().first_name} {this.client().last_name} </h3>
+                    <h3 className= "contact"> <strong>Email:</strong> {this.client().email} </h3>
+                    <h3 className= "contact"> <strong>Phone Number:</strong> {this.client().phone_number}</h3> 
+                    <h3 className= "contact"><strong>Company:</strong> {this.client().company_name}</h3>
+                    <h2 className="w3-center w3-padding-64"><span className="w3-tag w3-wide"><strong>Events:</strong></span></h2> 
 
                     {this.mapEvents()}
              
                    
         
 
-            <button className="btn btn-dark" onClick={this.handleOnClick} > Add New Event</button>
+            <button className="btn" onClick={this.handleOnClick} > Add New Event</button>
             {this.state.showEvent ? <EventForm clientId = {this.client().id} /> : null}
 
             

@@ -36,7 +36,7 @@ class ClientForm extends Component {
     render() {
         return (
             <form className='client-form' onSubmit={this.handleSubmit}>
-                <h2 className="client-form-title"> Create New Client</h2> <br/>
+                <h2 className="w3-center w3-padding-64"><span className="w3-tag w3-wide"> Create New Client </span></h2> <br/>
                 <label>First Name </label>
                 <input type='text' value={this.state.first_name} onChange={this.handleChange} name='first_name' required/>
                 <br/>

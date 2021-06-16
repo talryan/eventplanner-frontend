@@ -10,7 +10,7 @@ return <div className='event-chart'>
     <br />
     <br />
     <br />
-    <h1 className = "w3-center w3-padding-64"><span class="w3-tag w3-wide">TOTAL NUMBER OF EVENTS: {this.props.totalEvents}</span> </h1>
+    <h1 className="w3-center w3-padding-64"><span className="w3-tag w3-wide">TOTAL NUMBER OF EVENTS: {this.props.totalEvents}</span> </h1>
     <Doughnut
     data={{
       
