@@ -20,10 +20,10 @@ return <div className='event-chart'>
                 this.props.closedStatus
                     ],
             backgroundColor: [
-               '#F5EA69',
-               '#69F5A9',
-               '#D3386E',
-               '#CB6EFF'
+                '#e2b585',
+                '#96ac9d',
+                '#c36643',
+                '#4c251b'
             ]
             }
         ]
