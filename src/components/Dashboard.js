@@ -44,7 +44,7 @@ const mapStateToProps = ({events}, ownProps) => {
     const confirmedStatus= events.filter(event => event.status === "Confirmed")
     const cancelledStatus= events.filter(event =>  event.status === "Cancelled")
     const closedStatus= events.filter(event =>  event.status === "Closed")
-    console.log(tentativeStatus)
+
     return{tentativeStatus, confirmedStatus, cancelledStatus, closedStatus}
 
    

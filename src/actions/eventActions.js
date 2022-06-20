@@ -1,14 +1,10 @@
 export const fetchEvents = () => {
     return dispatch => {
-        console.log('c')
         fetch('http://127.0.0.1:3000/events')
         .then(resp => resp.json())
-        .then(events => { console.log('d')
-            dispatch({ type: 'FETCH_EVENTS', payload: events})})
-        
+        .then(grads => dispatch({ type: 'FETCH_EVENTS', payload: grads}))
     }
 }
-
 export const addEvent = (newEvent) => {
     return dispatch => {
         fetch('http://127.0.0.1:3000/events', {

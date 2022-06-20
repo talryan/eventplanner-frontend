@@ -14,9 +14,8 @@
 
   class App extends Component {
       componentDidMount() {
-          console.log('a')
       this.props.dispatchFetchEvents()
-      console.log('b')
+  
       }
 
       render() {

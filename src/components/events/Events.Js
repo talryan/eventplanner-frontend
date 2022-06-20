@@ -14,8 +14,10 @@ const Events = ({events}) => {
             <input input class="w3-input w3-padding-16 w3-border" type="text"
              placeholder = "Search By Name" 
              onChange={event => {setSearchTerm(event.target.value)} }/>
-            { // eslint-disable-next-line 
-            events.filter((val)=> {
+    
+            {// eslint-disable-next-line 
+                       events.filter((val)=> {
+                
                 if (searchTerm === ""){
                 return val
             }   else if (val.event_name.toLowerCase().includes(searchTerm.toLowerCase())){
